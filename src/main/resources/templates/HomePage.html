@@ -12,9 +12,13 @@
             <table id="demo" lay-filter="test"></table>
         </div>
     </div>
+    <div id="app">
+        {{ message }}
+    </div>
 </div>
 </body>
 <script th:src="@{layui/layui.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script th:inline="none">
     layui.config({
         base: '../'
@@ -31,5 +35,11 @@
             ,{field: 'wealth', title: '财富', sort: true}
         ])
     });
+    let app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
 </script>
 </html>
