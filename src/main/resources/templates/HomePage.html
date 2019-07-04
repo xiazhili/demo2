@@ -12,23 +12,24 @@
             <table id="demo" lay-filter="test"></table>
         </div>
     </div>
-
-
 </div>
 </body>
 <script th:src="@{layui/layui.js}"></script>
 <script th:inline="none">
-    //一般直接写在一个js文件中
     layui.config({
-        base: '../' //你存放新模块的目录，注意，不是layui的模块目录
+        base: '../'
     }).use('customTable',() => {
-        layui.customTable.render('/',[ //表头
-            {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
-            ,{field: 'username', title: '用户名', width:80}
-            ,{field: 'sex', title: '性别', width:80, sort: true}
-            ,{field: 'city', title: '城市', width:80}
+        layui.customTable.render('/users',[ //表头
+            {field: 'id', title: 'ID', sort: true, fixed: 'left'}
+            ,{field: 'username', title: '用户名',}
+            ,{field: 'sex', title: '性别', sort: true}
+            ,{field: 'city', title: '城市', }
+            ,{field: 'sign', title: '签名', }
+            ,{field: 'experience', title: '积分', sort: true}
+            ,{field: 'score', title: '评分', sort: true}
+            ,{field: 'classify', title: '职业'}
+            ,{field: 'wealth', title: '财富', sort: true}
         ])
-        console.log(layui.customTable)
     });
 </script>
 </html>
