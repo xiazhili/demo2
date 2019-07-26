@@ -38,7 +38,7 @@ public class Demo2Application {
             user.setUsername("夏志丽");
             user.setCity("广州");
             user.setSex("女");
-            user.setClassify("bug专家");
+            user.setClassify("专家");
             user.setScore(Long.valueOf(random.nextInt(10)));
             user.setExperience(Long.valueOf(random.nextInt(10000)));
             user.setSign("夏夏i");
